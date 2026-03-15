@@ -2,7 +2,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin:0;
     min-height:100vh;
-    background: linear-gradient(135deg,#1e3c72,#2a5298);
+    background: linear-gradient(135deg,hsl(219, 76%, 74%),#7aa1e4);
     /* Remove flex centering */
     /* display:flex;
     justify-content:center;
@@ -25,7 +25,7 @@ body{
 
 .payment-box{
     width:360px;
-    background:white;
+    background:rgb(156, 196, 231);
     padding:30px;
     border-radius:12px;
     text-align:center;
@@ -41,7 +41,7 @@ button{
     padding:12px 25px;
     border:none;
     background:#0b5ed7;
-    color:white;
+    color:rgb(87, 141, 248);
     font-size:16px;
     border-radius:8px;
     cursor:pointer;
