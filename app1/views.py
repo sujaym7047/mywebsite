@@ -8,10 +8,13 @@ from django.shortcuts import render
 def home(request):
     return render(request, "index.html")
 
+from django.shortcuts import render, redirect
+
 def payment(request):
     if request.method == "POST":
-        name = request.POST.get("name")
-        mobile = request.POST.get("mobile")
-        return render(request, "payment.html", {"name": name, "mobile": mobile})
-        return render(request, "success.html")
-    return render(request, "payment.html")
+        code = request.POST.get("code")
+
+        if code == "1234":
+            return redirect("https://sbm.gov.in/SBM_DBT/Secure/DBT/DBT_Registration.aspx")
+
+    return render(request,"payment.html")
