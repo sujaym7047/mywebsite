@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-s$=0fb_=-y56#=uk=j81oc3!j*_2kdfrc90cjq6z7xjzf2a44a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sbm.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'sbm.up.railway.app']
 
 # Application definition
 
@@ -121,10 +121,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
