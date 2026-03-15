@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Secure Payment</title>
+
+<link rel="stylesheet" href="{% static 'payment.css' %}">
+
+</head>
+
+<body>
+
+<div class="payment-wrapper">
+
+<div class="payment-box">
+
+<h2>Swachh Bharat Mission</h2>
+
+<p class="amount"><span class="bold-animate">Registration Fee:</span> ₹100</p>
+<style>
+.bold-animate {
+    font-weight: bold;
+    animation: boldPulse 1s infinite alternate;
+}
+@keyframes boldPulse {
+    from { color: #222; }
+    to { color: #1976d2; letter-spacing: 2px; }
+}
+</style>
+
+<div class="qr-section">
+
+<img src="{% static 'QRCode.png' %}" alt="QRCode">
+
+<p class="scan-text">
+<span style="font-weight:bold;">
+Scan this QR code with your UPI app (PhonePe / GPay / Paytm)
+</span>
+</p>
+
+</div>
+
+<div class="upi-box">
+UPI ID: <span style="font-weight:bold;">7047096969@ybl</span>
+</div>
+
+<button onclick="paymentSuccess()" class="pay-btn">
+Pay Now
+</button>
+<a href="https://sbm.gov.in/SBM_DBT/Secure/DBT/DBT_Registration.aspx" target="_blank">
+    <button class="access-btn">Access Link</button>
+</a>
+
+</div>
+
+</div>
+
+<script src="{% static 'js/payment.js' %}"></script>
+
+</body>
+</html>

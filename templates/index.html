@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Swachh Bharat Mission</title>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+
+
+
+</div>
+<h1>Swachh Bharat Mission Registration</h1>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="{% static 'a2.png' %}" alt="" style="width: 150px; margin-bottom: 20px;">
+
+    
+<h3>Pay Registration Fee</h3>
+<p class="animated-text">Please fill in the form below and pay the registration fee to participate in the Swachh Bharat Mission.</p>
+<style>
+.animated-text {
+    display: inline-block;
+    position: relative;
+    left: 100%;
+    animation: slideIn 2s ease-out forwards;
+    color: #f33b1e; /* Red */
+    font-weight: bold;
+    background: linear-gradient(90deg, #f33b1e 0%, #c98a2c 50%, #e21717 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes slideIn {
+    from { left: 10%; }
+    to { left: 0; }
+}
+</style>
+
+
+
+<form action="{% url 'payment' %}" method="post">
+{% csrf_token %}
+
+<div class="input-box">
+<label>Full Name</label>
+<input type="text" name="name" id="name" required>
+</div>
+
+<div class="input-box">
+<label>Mobile Number</label>
+<input type="text" name="mobile" id="mobile" required>
+
+</div>
+
+<button type="submit" class="submit-btn">Submit</button>
+
+</form>
+
+</div>
+
+<script src="{% static 'js/form.js' %}"></script>
+
+</body>
+</html>
