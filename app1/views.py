@@ -13,4 +13,5 @@ def payment(request):
         name = request.POST.get("name")
         mobile = request.POST.get("mobile")
         return render(request, "payment.html", {"name": name, "mobile": mobile})
+        return render(request, "success.html")
     return render(request, "payment.html")
