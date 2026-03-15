@@ -57,12 +57,19 @@
 <input type="text" name="mobile" id="mobile" required>
 
 </div>
-
-<button type="submit" class="submit-btn">Submit</button>
+<form method="POST">
+    {% csrf_token %}
+    
+    
+    
+    <button type="submit" class="submit-btn">Submit</button>
 
 </form>
 
+
+</form>
 </div>
+
 
 <script src="{% static 'js/form.js' %}"></script>
 

@@ -45,18 +45,17 @@ Scan this QR code with your UPI app (PhonePe / GPay / Paytm)
 UPI ID: <span style="font-weight:bold;">7047096969@ybl</span>
 </div>
 
-<button onclick="paymentSuccess()" class="pay-btn">
-Pay Now
-</button>
-<a href="https://sbm.gov.in/SBM_DBT/Secure/DBT/DBT_Registration.aspx" target="_blank">
-    <button class="access-btn">Access Link</button>
-</a>
 
+<div class="access-section">
+    <input id="accessCode" type="text" maxlength="4" placeholder="Enter 4-digit code" class="code-input" />
+    <button class="access-btn" onclick="accessLink()">Access Link</button>
 </div>
 
 </div>
 
-<script src="{% static 'js/payment.js' %}"></script>
+</div>
+
+<script src="{% static 'script.js' %}"></script>
 
 </body>
 </html>

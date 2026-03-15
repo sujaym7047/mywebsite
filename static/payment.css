@@ -47,3 +47,20 @@ button{
     cursor:pointer;
     transition:0.3s;
 }
+
+.access-section{
+    margin-top:16px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.code-input{
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid rgba(0,0,0,0.2);
+    width:150px;
+    max-width:100%;
+    text-align:center;
+}
