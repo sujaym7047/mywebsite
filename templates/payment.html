@@ -7,6 +7,95 @@
 
 <link rel="stylesheet" href="{% static 'payment.css' %}">
 
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: Arial, sans-serif;
+}
+
+.payment-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.payment-box {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.amount {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.qr-section {
+    margin: 30px 0;
+}
+
+.qr-section img {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.scan-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.upi-box {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.access-section {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.code-input {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.access-btn {
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.access-btn:hover {
+    background: #764ba2;
+}
+</style>
+
 </head>
 
 <body>
@@ -35,7 +124,6 @@ Scan this QR code with your UPI app (PhonePe / GPay / Paytm)
 UPI ID: <span style="font-weight:bold;">7047096969@ybl</span>
 </div>
 
-
 <form method="POST">
 {% csrf_token %}
 
@@ -49,6 +137,7 @@ UPI ID: <span style="font-weight:bold;">7047096969@ybl</span>
 </div>
 
 </div>
+
 <script src="{% static 'script.js' %}"></script>
 </body>
 </html>
