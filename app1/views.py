@@ -1,14 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
-from django.shortcuts import render
-
-from django.shortcuts import render
 
 def home(request):
     return render(request, "index.html")
-
-from django.shortcuts import render, redirect
 
 def payment(request):
     if request.method == "POST":
